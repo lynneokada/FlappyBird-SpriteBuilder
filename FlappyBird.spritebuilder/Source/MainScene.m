@@ -9,18 +9,17 @@
 #import "MainScene.h"
 #import "Obstacle.h"
 
-@interface CGPointObject : NSObject {
+@interface CGPointObject : NSObject
+{
     CGPoint _ratio;
     CGPoint _offset;
-    CCNode *__unsafe_unretained _child;
-    //weak ref
+    CCNode *__unsafe_unretained _child; // weak ref
 }
-
-@property (nonatomic, readwrite) CGPoint ratio;
-@property (nonatomic, readwrite) CGPoint offset;
-@property (nonatomic, readwrite,unsafe_unretained) CCNode *_child;
-+(id) pointWithCGPoint:(CGPoint)point offset:(CGPoint) offset;
--(id) initWithCGPoint:(CGPoint)point offset:(CGPoint) offset;
+@property (nonatomic,readwrite) CGPoint ratio;
+@property (nonatomic,readwrite) CGPoint offset;
+@property (nonatomic,readwrite,unsafe_unretained) CCNode *child;
++(id) pointWithCGPoint:(CGPoint)point offset:(CGPoint)offset;
+-(id) initWithCGPoint:(CGPoint)point offset:(CGPoint)offset;
 @end
 
 @implementation MainScene {
@@ -237,7 +236,7 @@
         // move it to the right
         if (bushScreenPosition.x <= (-1 * bush.contentSize.width)) {
             for (CGPointObject *child in _parallaxBackground.parallaxArray) {
-                if (child._child == bush) {
+                if (child.child == bush) {
                     child.offset = ccp(child.offset.x + 2*bush.contentSize.width, child.offset.y);
                 }
             }
@@ -255,7 +254,7 @@
         // move it to the right
         if (cloudScreenPosition.x <= (-1 * cloud.contentSize.width)) {
             for (CGPointObject *child in _parallaxBackground.parallaxArray) {
-                if (child._child == cloud) {
+                if (child.child == cloud) {
                     child.offset = ccp(child.offset.x + 2*cloud.contentSize.width, child.offset.y);
                 }
             }
