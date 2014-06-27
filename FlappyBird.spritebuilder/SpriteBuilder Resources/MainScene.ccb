@@ -495,9 +495,9 @@
 					</dict>
 				</array>
 				<key>customClass</key>
-				<string>parallaxContainer</string>
+				<string></string>
 				<key>displayName</key>
-				<string>CCNode</string>
+				<string>parallaxContainer</string>
 				<key>memberVarAssignmentName</key>
 				<string>_parallaxContainer</string>
 				<key>memberVarAssignmentType</key>
@@ -510,7 +510,7 @@
 						<key>type</key>
 						<string>StringSimple</string>
 						<key>value</key>
-						<string>parallaxContainer</string>
+						<string></string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -564,8 +564,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -972,6 +970,8 @@
 						<real>0.5</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
